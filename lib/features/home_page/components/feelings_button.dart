@@ -15,18 +15,18 @@ class FellingsButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: NovaColors.iconGray.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: GestureDetector(
-        onTap: () {
-          // Handle button tap
-          onPressed();
-        },
+    return GestureDetector(
+      onTap: () {
+        // Handle button tap
+        onPressed();
+      },
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: NovaColors.iconGray.withValues(alpha: 0.1),
+          borderRadius: BorderRadius.circular(12),
+        ),
         child: Row(
           children: [
             Row(
