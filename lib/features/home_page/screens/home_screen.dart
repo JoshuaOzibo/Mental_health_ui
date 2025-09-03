@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mental_health_mobile_app/features/home_page/components/feelings_button.dart';
 import '../../../core/colors/nova_colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -76,6 +77,11 @@ class HomeScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
+            FellingsButton(
+              onPressed: () => {},
+              text: 'How are you feeling today?',
+              fellings: '😊',
+            ),
             Center(
               child: Text(
                 'Home Screen',
@@ -83,6 +89,13 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ],
+
+
+
+
+
+
+          // SizedBox(height: 16 );
         ),
       ),
     );
