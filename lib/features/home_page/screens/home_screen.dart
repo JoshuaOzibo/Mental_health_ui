@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                         color: const Color.fromARGB(255, 227, 15, 0),
                         shape: BoxShape.circle,
                       ),
-              
+
                       child: Text(
                         '3',
                         style: TextStyle(fontSize: 10, color: Colors.white),
@@ -88,26 +88,93 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 30),
             FellingsButton(
               onPressed: () => {},
               text: 'How are you feeling today?',
               fellings: '😊',
             ),
-            Center(
-              child: Text(
-                'Home Screen',
-                style: TextStyle(color: NovaColors.primaryText),
-              ),
+
+            SizedBox(height: 35),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Start with one of these',
+                  style: TextStyle(
+                    color: NovaColors.primaryText,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 20),
+
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.only(
+                    left: 6,
+                    right: 20,
+                    top: 6,
+                    bottom: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: NovaColors.iconGray.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 15,
+                        ),
+                        decoration: BoxDecoration(
+                          color: NovaColors.cardBackground,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          'Practice',
+                          style: TextStyle(
+                            color: const Color.fromARGB(255, 43, 104, 161),
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        'Movies',
+                        style: TextStyle(
+                          color: NovaColors.subtleText,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Books',
+                        style: TextStyle(
+                          color: NovaColors.subtleText,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Tests',
+                        style: TextStyle(
+                          color: NovaColors.subtleText,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
-
-
-
-
-
-
-          // SizedBox(height: 16 );
         ),
       ),
     );

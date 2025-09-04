@@ -21,26 +21,34 @@ class FellingsButton extends StatelessWidget {
         onPressed();
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
         width: double.infinity,
         decoration: BoxDecoration(
           color: NovaColors.iconGray.withValues(alpha: 0.1),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(15),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
-                Text(fellings, style: TextStyle(fontSize: 24)),
+                Container(
+                  padding: EdgeInsets.all(9),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 249, 249, 249),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Text(fellings, style: TextStyle(fontSize: 24)),
+                ),
                 SizedBox(width: 8),
                 Text(
                   text,
-                  style: TextStyle(color: NovaColors.primaryText, fontSize: 16),
+                  style: TextStyle(color: const Color.fromARGB(255, 102, 102, 102), fontSize: 16),
                 ),
               ],
             ),
 
-            Icon(Icons.arrow_forward_ios, color: NovaColors.iconGray, size: 16),
+            Icon(Icons.arrow_forward_ios, color: NovaColors.iconGray, size: 20),
           ],
         ),
       ),
