@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mental_health_mobile_app/features/home_page/components/feelings_button.dart';
 import '../../../core/colors/nova_colors.dart';
+import '../components/practices_ui.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -85,96 +86,102 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 30),
-            FellingsButton(
-              onPressed: () => {},
-              text: 'How are you feeling today?',
-              fellings: '😊',
-            ),
-
-            SizedBox(height: 35),
-
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Start with one of these',
-                  style: TextStyle(
-                    color: NovaColors.primaryText,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 30),
+              FellingsButton(
+                onPressed: () => {},
+                text: 'How are you feeling today?',
+                fellings: '😊',
+              ),
+        
+              SizedBox(height: 35),
+        
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Start with one of these',
+                    style: TextStyle(
+                      color: NovaColors.primaryText,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-
-                Container(
-                  width: double.infinity,
-                  padding: EdgeInsets.only(
-                    left: 6,
-                    right: 20,
-                    top: 6,
-                    bottom: 6,
-                  ),
-                  decoration: BoxDecoration(
-                    color: NovaColors.iconGray.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 15,
+                  SizedBox(height: 20),
+        
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.only(
+                      left: 6,
+                      right: 20,
+                      top: 6,
+                      bottom: 6,
+                    ),
+                    decoration: BoxDecoration(
+                      color: NovaColors.iconGray.withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 15,
+                          ),
+                          decoration: BoxDecoration(
+                            color: NovaColors.cardBackground,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            'Practice',
+                            style: TextStyle(
+                              color: const Color.fromARGB(255, 43, 104, 161),
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
-                        decoration: BoxDecoration(
-                          color: NovaColors.cardBackground,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text(
-                          'Practice',
+                        Text(
+                          'Movies',
                           style: TextStyle(
-                            color: const Color.fromARGB(255, 43, 104, 161),
+                            color: NovaColors.subtleText,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                      Text(
-                        'Movies',
-                        style: TextStyle(
-                          color: NovaColors.subtleText,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                        Text(
+                          'Books',
+                          style: TextStyle(
+                            color: NovaColors.subtleText,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Books',
-                        style: TextStyle(
-                          color: NovaColors.subtleText,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                        Text(
+                          'Tests',
+                          style: TextStyle(
+                            color: NovaColors.subtleText,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Tests',
-                        style: TextStyle(
-                          color: NovaColors.subtleText,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+        
+                  SizedBox(height: 20),
+        
+                  PracticesUi(),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

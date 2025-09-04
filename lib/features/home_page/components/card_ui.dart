@@ -22,11 +22,15 @@ class CardUI extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 100,
-            width: 100,
-            color: NovaColors.cardBackground,
+            height: 70,
+            width: 70,
+            decoration: BoxDecoration(
+              color: NovaColors.cardBackground,
+              borderRadius: BorderRadius.circular(100),
+            ),
 
             child: Center(
               child: Icon(Icons.person, size: 40, color: NovaColors.iconGray),
