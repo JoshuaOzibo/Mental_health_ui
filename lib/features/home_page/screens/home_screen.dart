@@ -94,13 +94,13 @@ class HomeScreen extends StatelessWidget {
             children: [
               SizedBox(height: 30),
               FellingsButton(
-                onPressed: () => {},
+                onPressed: () => {print('Feelings Button Pressed')},
                 text: 'How are you feeling today?',
                 fellings: '😊',
               ),
-        
+
               SizedBox(height: 35),
-        
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -113,7 +113,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
-        
+
                   Container(
                     width: double.infinity,
                     padding: EdgeInsets.only(
@@ -174,14 +174,41 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-        
+
                   SizedBox(height: 20),
-        
+
                   PracticesUi(),
                 ],
               ),
             ],
           ),
+        ),
+      ),
+
+      bottomNavigationBar: SizedBox(
+        height: 100,
+        child: BottomNavigationBar(
+          backgroundColor: NovaColors.cardBackground,
+          selectedItemColor: NovaColors.accentBlue,
+          unselectedItemColor: NovaColors.tabGray,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          type: BottomNavigationBarType.fixed,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.my_location),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.message_rounded),
+              label: 'Help',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings_outlined),
+              label: 'Settings',
+            ),
+          ],
         ),
       ),
     );

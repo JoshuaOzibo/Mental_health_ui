@@ -19,7 +19,7 @@ class CardUI extends StatelessWidget {
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,22 +37,25 @@ class CardUI extends StatelessWidget {
             ),
           ),
 
-          SizedBox(height: 12),
+          SizedBox(height: 40),
 
           Text(
             practice,
             style: TextStyle(
               color: NovaColors.primaryText,
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
           ),
 
-          SizedBox(height: 8),
+          SizedBox(height: 6),
 
           Text(
             time,
-            style: TextStyle(color: NovaColors.iconGray, fontSize: 12),
+            style: TextStyle(color: 
+            NovaColors.primaryText,
+            fontWeight: FontWeight.normal,
+            fontSize: 13),
           ),
         ],
       ),
