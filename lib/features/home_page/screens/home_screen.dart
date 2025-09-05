@@ -94,7 +94,29 @@ class HomeScreen extends StatelessWidget {
             children: [
               SizedBox(height: 30),
               FellingsButton(
-                onPressed: () => {print('Feelings Button Pressed')},
+                onPressed: () => {
+                  showBottomSheet(
+                    context: context, 
+                    builder: (BuildContext context){
+                      return SizedBox(
+                        height: 200,
+                        child: Center(
+                          child: Center(
+                            child: Column(
+                              children: [
+                                Text('Feeling Button Pressed!'),
+                                ElevatedButton(
+                                  onPressed:() => {Navigator.pop(context)}, 
+                                  child: Text('close'))
+                              ],
+                            )
+                          ),
+                        ),
+                      );
+                    }
+
+                  )
+                },
                 text: 'How are you feeling today?',
                 fellings: '😊',
               ),
