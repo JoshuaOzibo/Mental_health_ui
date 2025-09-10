@@ -6,12 +6,10 @@ class FellingsButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.text,
-    required this.fellings,
   });
 
   final VoidCallback onPressed;
   final String text;
-  final String fellings;
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +36,15 @@ class FellingsButton extends StatelessWidget {
                     color: const Color.fromARGB(255, 249, 249, 249),
                     shape: BoxShape.circle,
                   ),
-                  child: Text(fellings, style: TextStyle(fontSize: 24)),
+                  child: Text('😊', style: TextStyle(fontSize: 24)),
                 ),
                 SizedBox(width: 8),
                 Text(
                   text,
-                  style: TextStyle(color: const Color.fromARGB(255, 102, 102, 102), fontSize: 16),
+                  style: TextStyle(
+                    color: const Color.fromARGB(255, 102, 102, 102),
+                    fontSize: 16,
+                  ),
                 ),
               ],
             ),

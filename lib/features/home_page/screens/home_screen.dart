@@ -124,10 +124,17 @@ class HomeScreen extends StatelessWidget {
                                       height: 40,
                                       // padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(100),
+                                        borderRadius: BorderRadius.circular(
+                                          100,
+                                        ),
                                         border: Border.all(
                                           width: 2,
-                                          color: const Color.fromARGB(255, 208, 208, 208),
+                                          color: const Color.fromARGB(
+                                            255,
+                                            208,
+                                            208,
+                                            208,
+                                          ),
                                         ),
                                       ),
                                       child: Center(
@@ -155,7 +162,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 },
                 text: 'How are you feeling today?',
-                fellings: '😊',
               ),
 
               SizedBox(height: 35),
