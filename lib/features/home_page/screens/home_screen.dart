@@ -96,26 +96,63 @@ class HomeScreen extends StatelessWidget {
               FellingsButton(
                 onPressed: () => {
                   showBottomSheet(
-                    context: context, 
-                    builder: (BuildContext context){
+                    context: context,
+                    builder: (BuildContext context) {
                       return SizedBox(
-                        height: 200,
-                        child: Center(
+                        height: 400,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 30,
+                            vertical: 30,
+                          ),
                           child: Center(
                             child: Column(
                               children: [
-                                Text('Feeling Button Pressed!'),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'How are you feeling today?',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 40,
+                                      height: 40,
+                                      // padding: EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(100),
+                                        border: Border.all(
+                                          width: 2,
+                                          color: const Color.fromARGB(255, 208, 208, 208),
+                                        ),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'X',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 22,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                                 ElevatedButton(
-                                  onPressed:() => {Navigator.pop(context)}, 
-                                  child: Text('close'))
+                                  onPressed: () => {Navigator.pop(context)},
+                                  child: Text('close'),
+                                ),
                               ],
-                            )
+                            ),
                           ),
                         ),
                       );
-                    }
-
-                  )
+                    },
+                  ),
                 },
                 text: 'How are you feeling today?',
                 fellings: '😊',
