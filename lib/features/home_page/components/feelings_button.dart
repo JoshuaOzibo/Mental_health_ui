@@ -6,10 +6,12 @@ class FellingsButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.text,
+    required this.icon
   });
 
   final VoidCallback onPressed;
   final String text;
+  final icon;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,7 @@ class FellingsButton extends StatelessWidget {
               ],
             ),
 
-            Icon(Icons.arrow_forward_ios, color: NovaColors.iconGray, size: 20),
+            Icon(icon, color: NovaColors.iconGray, size: 20),
           ],
         ),
       ),

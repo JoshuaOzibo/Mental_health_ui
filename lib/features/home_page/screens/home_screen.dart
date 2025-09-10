@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mental_health_mobile_app/features/home_page/components/feelings_button.dart';
+import 'package:mental_health_mobile_app/features/recommended_mood_page/screens/recommended_mood_page.dart';
 import '../../../core/colors/nova_colors.dart';
 import '../components/practices_ui.dart';
 
@@ -94,6 +95,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               SizedBox(height: 30),
               FellingsButton(
+                icon: Icons.arrow_forward_ios,
                 onPressed: () => {
                   showBottomSheet(
                     context: context,
@@ -138,11 +140,14 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                       ),
                                       child: Center(
-                                        child: Text(
-                                          'X',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 22,
+                                        child: ElevatedButton(
+                                          onPressed: () =>  {Navigator.pop(context)},
+                                          child: Text(
+                                            'X',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.normal,
+                                              fontSize: 22,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -150,7 +155,10 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                 ),
                                 ElevatedButton(
-                                  onPressed: () => {Navigator.pop(context)},
+                                  onPressed: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => RecommendedMoodPage()),
+                                  ),
                                   child: Text('close'),
                                 ),
                               ],
