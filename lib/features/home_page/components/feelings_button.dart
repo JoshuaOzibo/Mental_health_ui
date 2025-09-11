@@ -6,22 +6,21 @@ class FellingsButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.text,
-    required this.icon
+    this.emoji,
+    required this.icon,
   });
 
   final VoidCallback onPressed;
   final String text;
-  final icon;
+  final String? emoji;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        // Handle button tap
-        onPressed();
-      },
+      onTap: onPressed,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
         width: double.infinity,
         decoration: BoxDecoration(
           color: NovaColors.iconGray.withValues(alpha: 0.1),
@@ -32,25 +31,28 @@ class FellingsButton extends StatelessWidget {
           children: [
             Row(
               children: [
-                Container(
-                  padding: EdgeInsets.all(9),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 249, 249, 249),
-                    shape: BoxShape.circle,
+                if (emoji != null && emoji!.isNotEmpty)
+                  Container(
+                    padding: const EdgeInsets.all(9),
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 249, 249, 249),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Text(
+                      emoji!,
+                      style: const TextStyle(fontSize: 20),
+                    ),
                   ),
-                  child: Text('😊', style: TextStyle(fontSize: 24)),
-                ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Text(
                   text,
-                  style: TextStyle(
-                    color: const Color.fromARGB(255, 102, 102, 102),
+                  style: const TextStyle(
+                    color: Color.fromARGB(255, 102, 102, 102),
                     fontSize: 16,
                   ),
                 ),
               ],
             ),
-
             Icon(icon, color: NovaColors.iconGray, size: 20),
           ],
         ),

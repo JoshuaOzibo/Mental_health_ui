@@ -95,6 +95,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               SizedBox(height: 30),
               FellingsButton(
+                emoji: '😊',
                 icon: Icons.arrow_forward_ios,
                 onPressed: () => {
                   showBottomSheet(

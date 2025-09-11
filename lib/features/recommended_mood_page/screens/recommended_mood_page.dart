@@ -86,7 +86,7 @@ class RecommendedMoodPage extends StatelessWidget {
         ],
       ),
       body: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -96,13 +96,29 @@ class RecommendedMoodPage extends StatelessWidget {
               onPressed: () => {},
               text: 'How are you feeling today?',
             ),
-        
+
+            SizedBox(height: 30),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              Text('Recommended for your mood'), 
-              Text('See all')]),
-        
+                Text(
+                  'Recommended for your mood',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'See all',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 0, 72, 150),
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(height: 20),
+
             Column(
               spacing: 20,
               crossAxisAlignment: CrossAxisAlignment.start,
