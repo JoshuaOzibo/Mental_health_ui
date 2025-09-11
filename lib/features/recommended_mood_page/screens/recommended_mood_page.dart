@@ -97,7 +97,11 @@ class RecommendedMoodPage extends StatelessWidget {
               text: 'How are you feeling today?',
             ),
         
-            Row(children: [Text('Recommended for your mood'), Text('See all')]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Text('Recommended for your mood'), 
+              Text('See all')]),
         
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

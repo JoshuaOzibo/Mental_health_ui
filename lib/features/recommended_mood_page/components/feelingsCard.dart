@@ -17,35 +17,36 @@ class FellingsCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.blueGrey,
-        borderRadius: BorderRadius.circular(20),
+        // borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: 10,
         children: [
-          Container(
-            height: 200,
-            width: 10,
-            decoration: BoxDecoration(color: Colors.greenAccent),
+          Expanded(
+            child: Image.asset('assets/images/pexels-pixabay-158063.jpg', 
+            fit: BoxFit.cover, 
+            height: 200)
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                paragraphOne,
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
-              ),
-              SizedBox(height: 20),
-              Text(
-                heading,
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
-              ),
-              SizedBox(height: 15),
-              Text(
-                paragraphTwo,
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
-              ),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  paragraphOne,
+                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
+                ),
+                SizedBox(height: 20),
+                Text(
+                  heading,
+                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
+                ),
+                SizedBox(height: 15),
+                Text(
+                  paragraphTwo,
+                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
+                ),
+              ],
+            ),
           ),
         ],
       ),
