@@ -107,62 +107,64 @@ class HomeScreen extends StatelessWidget {
                             horizontal: 30,
                             vertical: 30,
                           ),
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'How are you feeling today?',
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w600,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'How are you feeling today?',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      border: Border.all(
+                                        width: 2,
+                                        color: const Color.fromARGB(255, 208, 208, 208),
                                       ),
                                     ),
-                                    Container(
-                                      width: 40,
-                                      height: 40,
-                                      // padding: EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(
-                                          100,
-                                        ),
-                                        border: Border.all(
-                                          width: 2,
-                                          color: const Color.fromARGB(
-                                            255,
-                                            208,
-                                            208,
-                                            208,
-                                          ),
-                                        ),
-                                      ),
+                                    child: GestureDetector(
+                                      onTap: () => {Navigator.pop(context)},
                                       child: Center(
-                                        child: ElevatedButton(
-                                          onPressed: () =>  {Navigator.pop(context)},
-                                          child: Text(
-                                            'X',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.normal,
-                                              fontSize: 22,
-                                            ),
+                                        child: Text(
+                                          'X',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 20,
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ],
-                                ),
-                                ElevatedButton(
+                                  ),
+                                ],
+                              ),
+                              
+                              Spacer(),
+                              SizedBox(
+                                width: double.infinity,
+                                height: 60,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        const Color.fromARGB(255, 0, 72, 150),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(100),
+                                    ),
+                                  ),
                                   onPressed: () => Navigator.push(
                                     context,
                                     MaterialPageRoute(builder: (context) => RecommendedMoodPage()),
                                   ),
-                                  child: Text('close'),
+                                  child: Text('Continue', style: TextStyle(color: Colors.white, fontSize: 18),),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       );
