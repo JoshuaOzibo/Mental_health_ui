@@ -104,9 +104,23 @@ class RecommendedMoodPage extends StatelessWidget {
               Text('See all')]),
         
             Column(
+              spacing: 20,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 FellingsCard(
+                  image: 'assets/images/pexels-pixabay-158063.jpg',
+                  paragraphOne: 'Meditation . 10 mins',
+                  heading: 'Anchoring with the breath',
+                  paragraphTwo: 'Jay Shetty',
+                ),
+                FellingsCard(
+                  image: 'assets/images/pexels-pixabay-158063.jpg',
+                  paragraphOne: 'Meditation . 10 mins',
+                  heading: 'Anchoring with the breath',
+                  paragraphTwo: 'Jay Shetty',
+                ),
+                FellingsCard(
+                  image: 'assets/images/pexels-pixabay-158063.jpg',
                   paragraphOne: 'Meditation . 10 mins',
                   heading: 'Anchoring with the breath',
                   paragraphTwo: 'Jay Shetty',

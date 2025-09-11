@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mental_health_mobile_app/core/colors/nova_colors.dart';
 
 class FellingsCard extends StatelessWidget {
   const FellingsCard({
@@ -6,46 +7,72 @@ class FellingsCard extends StatelessWidget {
     required this.paragraphOne,
     required this.heading,
     required this.paragraphTwo,
+    required this.image,
   });
 
   final String paragraphOne;
   final String heading;
   final paragraphTwo;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.blueGrey,
-        // borderRadius: BorderRadius.circular(20),
+        color: NovaColors.iconGray.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
-            child: Image.asset('assets/images/pexels-pixabay-158063.jpg', 
-            fit: BoxFit.cover, 
-            height: 200)
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                image,
+                fit: BoxFit.cover,
+                height: 150,
+                width: double.infinity,
+              ),
+            ),
           ),
+          const SizedBox(width: 12),
+
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  paragraphOne,
-                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
-                ),
-                SizedBox(height: 20),
-                Text(
-                  heading,
-                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
-                ),
-                SizedBox(height: 15),
-                Text(
-                  paragraphTwo,
-                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
-                ),
-              ],
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    paragraphOne,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                      color: NovaColors.secondaryText
+                    ),
+                  ),
+                  const SizedBox(height: 14),
+                  Text(
+                    heading,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    paragraphTwo,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                      color: NovaColors.secondaryText
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
