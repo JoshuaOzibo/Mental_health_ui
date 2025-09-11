@@ -8,8 +8,8 @@ class FellingsCard extends StatelessWidget {
     required this.paragraphTwo,
   });
 
-  final paragraphOne;
-  final heading;
+  final String paragraphOne;
+  final String heading;
   final paragraphTwo;
 
   @override
@@ -25,10 +25,11 @@ class FellingsCard extends StatelessWidget {
         children: [
           Container(
             height: 200,
-            width: 150,
+            width: 10,
             decoration: BoxDecoration(color: Colors.greenAccent),
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 paragraphOne,

@@ -110,7 +110,8 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'How are you feeling today?',
@@ -126,7 +127,12 @@ class HomeScreen extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(100),
                                       border: Border.all(
                                         width: 2,
-                                        color: const Color.fromARGB(255, 208, 208, 208),
+                                        color: const Color.fromARGB(
+                                          255,
+                                          208,
+                                          208,
+                                          208,
+                                        ),
                                       ),
                                     ),
                                     child: GestureDetector(
@@ -144,24 +150,37 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              
+
                               Spacer(),
                               SizedBox(
                                 width: double.infinity,
                                 height: 60,
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor:
-                                        const Color.fromARGB(255, 0, 72, 150),
+                                    backgroundColor: const Color.fromARGB(
+                                      255,
+                                      0,
+                                      72,
+                                      150,
+                                    ),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(100),
                                     ),
                                   ),
                                   onPressed: () => Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => RecommendedMoodPage()),
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          RecommendedMoodPage(),
+                                    ),
                                   ),
-                                  child: Text('Continue', style: TextStyle(color: Colors.white, fontSize: 18),),
+                                  child: Text(
+                                    'Continue',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
