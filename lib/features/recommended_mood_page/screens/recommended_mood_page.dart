@@ -1,6 +1,7 @@
 import 'package:mental_health_mobile_app/features/home_page/components/feelings_button.dart';
 import 'package:flutter/material.dart';
 import 'package:mental_health_mobile_app/features/recommended_mood_page/components/feelingsCard.dart';
+import 'package:mental_health_mobile_app/features/recommended_mood_page/components/selected_feelings_button.dart';
 import '../../../core/colors/nova_colors.dart';
 
 class RecommendedMoodPage extends StatelessWidget {
@@ -92,9 +93,11 @@ class RecommendedMoodPage extends StatelessWidget {
           children: [
             SizedBox(height: 30),
             FellingsButton(
-              trailing: Icon(Icons.arrow_forward_ios_outlined, color: NovaColors.iconGray, size: 20),
-              onPressed: () => {},
-              text: 'How are you feeling today?',
+              trailing: SelectedFeelingsButton(),
+              onPressed: () => {
+                Navigator.pop(context),
+              },
+              text: 'You are feeling:',
             ),
 
             SizedBox(height: 30),

@@ -20,7 +20,7 @@ class FellingsButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 13),
         width: double.infinity,
         decoration: BoxDecoration(
           color: NovaColors.iconGray.withValues(alpha: 0.1),
