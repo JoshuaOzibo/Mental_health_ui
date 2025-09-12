@@ -7,20 +7,20 @@ class FellingsButton extends StatelessWidget {
     required this.onPressed,
     required this.text,
     this.emoji,
-    required this.icon,
+    this.trailing,
   });
 
   final VoidCallback onPressed;
   final String text;
   final String? emoji;
-  final IconData icon;
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
         width: double.infinity,
         decoration: BoxDecoration(
           color: NovaColors.iconGray.withValues(alpha: 0.1),
@@ -53,7 +53,7 @@ class FellingsButton extends StatelessWidget {
                 ),
               ],
             ),
-            Icon(icon, color: NovaColors.iconGray, size: 20),
+            trailing ?? const SizedBox.shrink()
           ],
         ),
       ),

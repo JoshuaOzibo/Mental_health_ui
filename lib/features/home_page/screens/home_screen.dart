@@ -96,7 +96,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 30),
               FellingsButton(
                 emoji: '😊',
-                icon: Icons.arrow_forward_ios,
+                              trailing: Icon(Icons.arrow_forward_ios_outlined, color: NovaColors.iconGray, size: 20),
                 onPressed: () => {
                   showBottomSheet(
                     context: context,

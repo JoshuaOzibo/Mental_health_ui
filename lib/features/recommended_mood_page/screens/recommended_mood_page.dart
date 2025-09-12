@@ -92,7 +92,7 @@ class RecommendedMoodPage extends StatelessWidget {
           children: [
             SizedBox(height: 30),
             FellingsButton(
-              icon: Icons.arrow_forward_ios,
+              trailing: Icon(Icons.arrow_forward_ios_outlined, color: NovaColors.iconGray, size: 20),
               onPressed: () => {},
               text: 'How are you feeling today?',
             ),
