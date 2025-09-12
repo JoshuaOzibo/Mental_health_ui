@@ -46,7 +46,7 @@ class AppBarSection extends StatelessWidget implements PreferredSizeWidget {
         Container(
           margin: EdgeInsets.only(right: 16),
           width: 55,
-          height: 60,
+          height: 55,
           decoration: BoxDecoration(
             border: Border.all(color: NovaColors.iconGray),
             borderRadius: BorderRadius.circular(12),
