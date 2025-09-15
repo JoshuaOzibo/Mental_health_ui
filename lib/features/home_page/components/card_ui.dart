@@ -37,7 +37,7 @@ class CardUI extends StatelessWidget {
             ),
           ),
 
-          SizedBox(height: 40),
+          SizedBox(height: 30),
 
           Text(
             practice,
