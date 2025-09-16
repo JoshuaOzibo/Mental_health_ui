@@ -4,15 +4,14 @@ import 'package:mental_health_mobile_app/features/recommended_mood_page/screens/
 import '../../../core/static/data.dart';
 
 class BottomShitcontainer extends StatefulWidget {
-  const BottomShitcontainer({super.key, required this.selected});
-  final selected;
+  const BottomShitcontainer({super.key});
 
   @override
   State<BottomShitcontainer> createState() => _BottomShitcontainerState();
 }
 
 class _BottomShitcontainerState extends State<BottomShitcontainer> {
-  final String selected = "";
+  String selected = "";
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +84,7 @@ class _BottomShitcontainerState extends State<BottomShitcontainer> {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => RecommendedMoodPage(),
+                    builder: (context) => RecommendedMoodPage(selected: selected),
                   ),
                 ),
                 child: Text(

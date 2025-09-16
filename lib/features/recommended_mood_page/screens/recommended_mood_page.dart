@@ -7,7 +7,8 @@ import '../../../core/colors/nova_colors.dart';
 import '../../../core/static/data.dart';
 
 class RecommendedMoodPage extends StatelessWidget {
-  const RecommendedMoodPage({super.key});
+  const RecommendedMoodPage({super.key, required this.selected});
+  final String selected;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class RecommendedMoodPage extends StatelessWidget {
             children: [
               SizedBox(height: 30),
               FellingsButton(
-                trailing: SelectedFeelingsButton(),
+                trailing: SelectedFeelingsButton(feeling: selected),
                 onPressed: () => {Navigator.pop(context)},
                 text: 'You are feeling:',
               ),

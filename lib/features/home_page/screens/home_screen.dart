@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                   showBottomSheet(
                     context: context,
                     builder: (BuildContext context) {
-                      return BottomShitcontainer(selected: '',);
+                      return BottomShitcontainer();
                     },
                   ),
                 },
