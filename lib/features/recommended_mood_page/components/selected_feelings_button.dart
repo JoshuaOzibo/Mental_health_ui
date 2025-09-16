@@ -32,10 +32,11 @@ class SelectedFeelingsButton extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () => {Navigator.pop(context)},
                   child: Center(
-                    child: Text(
-                      'X',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-                    ),
+                    child: Icon(Icons.cancel_outlined)
+                    //  Text(
+                    //   'u',
+                    //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                    // ),
                   ),
                 ),
               ),

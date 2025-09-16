@@ -84,7 +84,10 @@ class _BottomShitcontainerState extends State<BottomShitcontainer> {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => RecommendedMoodPage(selected: selected),
+                    builder: (context) => SizedBox(
+                      height: 500,
+                      child: RecommendedMoodPage(selected: selected),
+                    ),
                   ),
                 ),
                 child: Text(

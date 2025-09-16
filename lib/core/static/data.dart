@@ -3,25 +3,25 @@ List<Map<String, String>> data = [
     "paragraphOne": "Meditation . 10 mins",
     "heading": "Anchoring with the breath",
     "paragraphTwo": "Jay Shetty",
-    "image": "assets/images/pexels-pixabay-158063.jpg",
+    "image": "assets/images/sunset-7133867_1280.jpg",
   },
   {
     "paragraphOne": "Meditation . 10 mins",
     "heading": "Calm Light",
     "paragraphTwo": "Jay Shetty",
-    "image": "assets/images/pexels-pixabay-158063.jpg",
+    "image": "assets/images/chilli-9202873_1280.jpg",
   },
   {
     "paragraphOne": "Meditation . 10 mins",
     "heading": "Daily Move",
     "paragraphTwo": "Jay Shetty",
-    "image": "assets/images/pexels-pixabay-158063.jpg",
+    "image": "assets/images/raindrop-1587994_1280.jpg",
   },
   {
     "paragraphOne": "Meditation . 10 mins",
     "heading": "Daily execise",
     "paragraphTwo": "Jay Shetty",
-    "image": "assets/images/pexels-pixabay-158063.jpg",
+    "image": "assets/images/squirrel-619968_1280.jpg",
   },
 ];
 
