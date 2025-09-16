@@ -40,7 +40,7 @@ class FellingsButton extends StatelessWidget {
                     ),
                     child: Text(
                       emoji!,
-                      style: const TextStyle(fontSize: 20),
+                      style: const TextStyle(fontSize: 20,),
                     ),
                   ),
                 const SizedBox(width: 8),
@@ -48,7 +48,7 @@ class FellingsButton extends StatelessWidget {
                   text,
                   style: const TextStyle(
                     color: Color.fromARGB(255, 102, 102, 102),
-                    fontSize: 16,
+                    fontSize: 14,
                   ),
                 ),
               ],

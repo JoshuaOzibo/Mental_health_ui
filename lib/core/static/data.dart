@@ -7,19 +7,19 @@ List<Map<String, String>> data = [
   },
   {
     "paragraphOne": "Meditation . 10 mins",
-    "heading": "Anchoring with the breath",
+    "heading": "Calm Light",
     "paragraphTwo": "Jay Shetty",
     "image": "assets/images/pexels-pixabay-158063.jpg",
   },
   {
     "paragraphOne": "Meditation . 10 mins",
-    "heading": "Anchoring with the breath",
+    "heading": "Daily Move",
     "paragraphTwo": "Jay Shetty",
     "image": "assets/images/pexels-pixabay-158063.jpg",
   },
   {
     "paragraphOne": "Meditation . 10 mins",
-    "heading": "Anchoring with the breath",
+    "heading": "Daily execise",
     "paragraphTwo": "Jay Shetty",
     "image": "assets/images/pexels-pixabay-158063.jpg",
   },

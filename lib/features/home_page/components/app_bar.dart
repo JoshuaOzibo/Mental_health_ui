@@ -13,6 +13,7 @@ class AppBarSection extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: 80,
       backgroundColor: NovaColors.backgroundLight,
       leading: Row(
+        spacing: 8,
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -35,7 +36,7 @@ class AppBarSection extends StatelessWidget implements PreferredSizeWidget {
                 style: TextStyle(color: NovaColors.primaryText, fontSize: 12),
               ),
               Text(
-                'Let\'s lift your mood',
+                'Let\'s lift your mood😊',
                 style: TextStyle(color: NovaColors.primaryText, fontSize: 12),
               ),
             ],
@@ -63,7 +64,7 @@ class AppBarSection extends StatelessWidget implements PreferredSizeWidget {
                     width: 15,
                     height: 15,
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 227, 15, 0),
+                      color: const Color.fromARGB(255, 180, 12, 0),
                       shape: BoxShape.circle,
                     ),
                     child: Text(

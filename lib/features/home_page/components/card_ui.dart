@@ -25,10 +25,10 @@ class CardUI extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 60,
-            width: 60,
-            decoration: BoxDecoration(
-              color: NovaColors.cardBackground,
+            height: 55,
+            width: 55,
+            decoration: BoxDecoration( //const Color.fromARGB(255, 255, 226, 208), Color.fromARGB(255, 220, 232, 212),
+              color: Colors.white,
               borderRadius: BorderRadius.circular(100),
             ),
 
@@ -43,19 +43,19 @@ class CardUI extends StatelessWidget {
             practice,
             style: TextStyle(
               color: NovaColors.primaryText,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
             ),
           ),
 
-          SizedBox(height: 6),
+          SizedBox(height: 8),
 
           Text(
             time,
             style: TextStyle(
-              color: NovaColors.primaryText,
+              color: const Color.fromARGB(255, 85, 85, 85),
               fontWeight: FontWeight.normal,
-              fontSize: 13,
+              fontSize: 12,
             ),
           ),
         ],

@@ -25,8 +25,8 @@ class HomeScreen extends StatelessWidget {
                 emoji: '😊',
                 trailing: Icon(
                   Icons.arrow_forward_ios_outlined,
-                  color: NovaColors.iconGray,
-                  size: 20,
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  size: 18,
                 ),
                 onPressed: () => {
                   showBottomSheet(
@@ -48,8 +48,8 @@ class HomeScreen extends StatelessWidget {
                     'Start with one of these',
                     style: TextStyle(
                       color: NovaColors.primaryText,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w800,
                     ),
                   ),
                   SizedBox(height: 20),
@@ -81,34 +81,34 @@ class HomeScreen extends StatelessWidget {
                           child: Text(
                             'Practice',
                             style: TextStyle(
-                              color: const Color.fromARGB(255, 43, 104, 161),
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                              color: const Color.fromARGB(255, 27, 87, 143),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
                         Text(
                           'Movies',
                           style: TextStyle(
-                            color: NovaColors.subtleText,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                            color: const Color.fromARGB(255, 96, 96, 96),
+                            fontSize: 15,
+                              fontWeight: FontWeight.normal,
                           ),
                         ),
                         Text(
                           'Books',
                           style: TextStyle(
-                            color: NovaColors.subtleText,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                            color: const Color.fromARGB(255, 96, 96, 96),
+                            fontSize: 15,
+                              fontWeight: FontWeight.normal,
                           ),
                         ),
                         Text(
                           'Tests',
                           style: TextStyle(
-                            color: NovaColors.subtleText,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                            color: const Color.fromARGB(255, 96, 96, 96),
+                            fontSize: 15,
+                              fontWeight: FontWeight.normal,
                           ),
                         ),
                       ],

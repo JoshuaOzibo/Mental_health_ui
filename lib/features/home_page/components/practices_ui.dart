@@ -18,7 +18,7 @@ class PracticesUi extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 20,
               mainAxisSpacing: 20,
-              childAspectRatio: 0.9,
+              childAspectRatio: 1.1,
             ),
           
             itemCount: practiceData.length,
@@ -26,11 +26,11 @@ class PracticesUi extends StatelessWidget {
               final data = practiceData[index];
               return CardUI(
                 color: data['color'] == "NovaColors.meditationGreen" ? NovaColors.meditationGreen
-                : data['color'] == "NovaColors.positiveFocusPeach," ? NovaColors.positiveFocusPeach
-                : data['color'] == "NovaColors.wakeUpBlue" ? NovaColors.wakeUpBlue
-                : data['color'] == "NovaColors.mindfulnessLightGreen" ? NovaColors.mindfulnessLightGreen
-                : data['color'] == "const Color.fromARGB(255, 218, 255, 153)" ? const Color.fromARGB(255, 218, 255, 153)
-                : const Color.fromARGB(255, 176, 255, 255),
+                : data['color'] == "NovaColors.positiveFocusPeach," ? const Color.fromARGB(255, 230, 216, 174)
+                : data['color'] == "NovaColors.wakeUpBlue" ? const Color.fromARGB(255, 161, 200, 240)
+                : data['color'] == "NovaColors.mindfulnessLightGreen" ? const Color.fromARGB(255, 219, 236, 219)
+                : data['color'] == "const Color.fromARGB(255, 218, 255, 153)" ? const Color.fromARGB(255, 253, 197, 242)
+                : const Color.fromARGB(255, 183, 255, 255),
                 practice: data['practice']!,
                 time: data['time']!,
               );
