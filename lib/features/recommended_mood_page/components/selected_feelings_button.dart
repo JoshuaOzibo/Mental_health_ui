@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SelectedFeelingsButton extends StatelessWidget {
-  const SelectedFeelingsButton({super.key, required this.feeling});
+  const SelectedFeelingsButton({super.key, required this.feeling, required this.emoji});
   final String feeling;
+  final String emoji;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class SelectedFeelingsButton extends StatelessWidget {
       child: Row(
         spacing: 8,
         children: [
-          Text('😊', style: TextStyle(fontSize: 20)),
+          Text(emoji, style: TextStyle(fontSize: 20)),
           Text(feeling, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
           Center(
             child: Container(

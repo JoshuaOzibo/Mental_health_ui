@@ -6,8 +6,9 @@ import 'package:mental_health_mobile_app/features/recommended_mood_page/componen
 import '../../../core/static/data.dart';
 
 class RecommendedMoodPage extends StatelessWidget {
-  const RecommendedMoodPage({super.key, required this.selected});
+  const RecommendedMoodPage({super.key, required this.selected, required this.selectedEmoji});
   final String selected;
+  final String selectedEmoji;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class RecommendedMoodPage extends StatelessWidget {
           children: [
             SizedBox(height: 30),
             FellingsButton(
-              trailing: SelectedFeelingsButton(feeling: selected),
+              trailing: SelectedFeelingsButton(feeling: selected, emoji: selectedEmoji),
               onPressed: () => {Navigator.pop(context)},
               text: 'You are feeling:',
             ),
