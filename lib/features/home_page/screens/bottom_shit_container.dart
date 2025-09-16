@@ -67,7 +67,12 @@ class _BottomShitcontainerState extends State<BottomShitcontainer> {
                   emoji: item['emoji']!,
                   text: item['text']!,
                   isSelected: selected == item['text']!,
-                  onTap: () => setState(() => (selectedEmoji = item["emoji"]!, selected = item["text"]!)),
+                  onTap: () => setState(
+                    () => (
+                      selectedEmoji = item["emoji"]!,
+                      selected = item["text"]!,
+                    ),
+                  ),
                 );
               }).toList(),
             ),
@@ -88,7 +93,10 @@ class _BottomShitcontainerState extends State<BottomShitcontainer> {
                   MaterialPageRoute(
                     builder: (context) => SizedBox(
                       height: 500,
-                      child: RecommendedMoodPage(selected: selected, selectedEmoji: selectedEmoji),
+                      child: RecommendedMoodPage(
+                        selected: selected,
+                        selectedEmoji: selectedEmoji,
+                      ),
                     ),
                   ),
                 ),

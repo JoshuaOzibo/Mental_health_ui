@@ -7,11 +7,13 @@ class CardUI extends StatelessWidget {
     required this.color,
     required this.practice,
     required this.time,
+    required this.iconData,
   });
 
   final Color color;
   final String practice;
   final String time;
+  final IconData iconData;
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +29,14 @@ class CardUI extends StatelessWidget {
           Container(
             height: 55,
             width: 55,
-            decoration: BoxDecoration( //const Color.fromARGB(255, 255, 226, 208), Color.fromARGB(255, 220, 232, 212),
+            decoration: BoxDecoration(
+              //const Color.fromARGB(255, 255, 226, 208), Color.fromARGB(255, 220, 232, 212),
               color: Colors.white,
               borderRadius: BorderRadius.circular(100),
             ),
 
             child: Center(
-              child: Icon(Icons.person, size: 40, color: NovaColors.iconGray),
+              child: Icon(iconData, size: 40, color: NovaColors.iconGray),
             ),
           ),
 

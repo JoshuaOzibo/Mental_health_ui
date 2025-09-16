@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 List<Map<String, String>> data = [
   {
     "paragraphOne": "Meditation . 10 mins",
@@ -25,37 +27,43 @@ List<Map<String, String>> data = [
   },
 ];
 
-List<Map<String, String>> practiceData = [
+List<Map<String, dynamic>> practiceData = [
   {
     "practice" : "Meditation",
     "time" : "Meditation . 10 mins",
     "color": "NovaColors.meditationGreen",
+    "icon": Icons.self_improvement,
     
   },
   {
     "practice" : "Positive focus",
     "time" : "Meditation . 10 mins",
      "color": "NovaColors.positiveFocusPeach,",
+      "icon": Icons.spa,
   },
   {
     "practice" : "Meditation",
     "time" : "Positive focus . 15 mins",
      "color": "NovaColors.wakeUpBlue",
+      "icon": Icons.brightness_5,
   },
   {
     "practice" : "Wake up",
     "time" : "Wake up . 6 hours",
      "color": "NovaColors.mindfulnessLightGreen",
+      "icon": Icons.light_mode,
   },
   {
     "practice" : "Mindfulness . 15 mins",
     "time" : "Mindfulness . 15 mins",
      "color": "const Color.fromARGB(255, 218, 255, 153)",
+      "icon": Icons.psychology,
   },
   {
     "practice" : "Wake up",
     "time" : "Wake up . 6 hours",
      "color": "const Color.fromARGB(255, 176, 255, 255)",
+      "icon": Icons.alarm,
   },
 ];
 

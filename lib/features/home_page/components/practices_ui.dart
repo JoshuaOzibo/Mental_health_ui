@@ -34,6 +34,7 @@ class PracticesUi extends StatelessWidget {
               : const Color.fromARGB(255, 183, 255, 255),
           practice: data['practice']!,
           time: data['time']!,
+          iconData: data['icon']!,
         );
       },
     );

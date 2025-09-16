@@ -117,7 +117,7 @@ class HomeScreen extends StatelessWidget {
 
                 SizedBox(height: 20),
 
-                SizedBox(height: 420, child: PracticesUi()),
+                SizedBox(height: 420, child: const PracticesUi()),
               ],
             ),
           ],
