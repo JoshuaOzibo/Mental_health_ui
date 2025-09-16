@@ -58,3 +58,12 @@ List<Map<String, String>> practiceData = [
      "color": "const Color.fromARGB(255, 176, 255, 255)",
   },
 ];
+
+  List<Map<String, String>> feelings = [
+    {"emoji": "🥳", "text": "Happy"},
+    {"emoji": "😰", "text": "Anxious"},
+    {"emoji": "😢", "text": "Sad"},
+    {"emoji": "😐", "text": "Unsure"},
+    {"emoji": "😡", "text": "Panicked"},
+    {"emoji": "😴", "text": "Tired"},
+  ];
