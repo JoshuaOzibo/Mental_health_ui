@@ -23,9 +23,16 @@ class AppBarSection extends StatelessWidget implements PreferredSizeWidget {
             height: 60,
             decoration: BoxDecoration(
               color: NovaColors.green,
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(100),
             ),
-            child: Icon(Icons.person, color: NovaColors.iconGray),
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(100),
+              child: Image.asset(
+              'assets/images/squirrel-619968_1280.jpg',
+              fit: BoxFit.cover,
+              width: double.infinity,
+            ),
+            )
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -23,10 +23,10 @@ class BottomShitButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
-            color: isSelected ? Colors.blue : '',
+            color: isSelected ? Colors.blue : Colors.blue.withOpacity(0.02),
             width: 2,
           ),
-          color: isSelected ? Colors.blue.withOpacity(0.1) : Colors.white,
+          color: isSelected ? Colors.blue.withOpacity(0.1) : Colors.blue.withOpacity(0.05),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,

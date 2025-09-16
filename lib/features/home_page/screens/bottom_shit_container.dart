@@ -19,6 +19,7 @@ class _BottomShitcontainerState extends State<BottomShitcontainer> {
     return SizedBox(
       height: 450,
       child: Container(
+        color: Colors.white,
         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
         child: Column(
           children: [
