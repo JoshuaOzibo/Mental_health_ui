@@ -11,117 +11,116 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: NovaColors.backgroundLight,
+      backgroundColor: Colors.white,
       appBar: AppBarSection(),
 
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 30),
-              FellingsButton(
-                emoji: '😊',
-                trailing: Icon(
-                  Icons.arrow_forward_ios_outlined,
-                  color: const Color.fromARGB(255, 124, 124, 124),
-                  size: 18,
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        color: Colors.white,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 30),
+            FellingsButton(
+              emoji: '😊',
+              trailing: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: const Color.fromARGB(255, 124, 124, 124),
+                size: 18,
+              ),
+              onPressed: () => {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return BottomShitcontainer();
+                  },
                 ),
-                onPressed: () => {
-                  showBottomSheet(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return BottomShitcontainer();
-                    },
+              },
+              text: 'How are you feeling today?',
+            ),
+
+            SizedBox(height: 35),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Start with one of these',
+                  style: TextStyle(
+                    color: NovaColors.primaryText,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w800,
                   ),
-                },
-                text: 'How are you feeling today?',
-              ),
+                ),
+                SizedBox(height: 20),
 
-              SizedBox(height: 35),
-
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Start with one of these',
-                    style: TextStyle(
-                      color: NovaColors.primaryText,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w800,
-                    ),
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.only(
+                    left: 6,
+                    right: 20,
+                    top: 6,
+                    bottom: 6,
                   ),
-                  SizedBox(height: 20),
-
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.only(
-                      left: 6,
-                      right: 20,
-                      top: 6,
-                      bottom: 6,
-                    ),
-                    decoration: BoxDecoration(
-                      color: NovaColors.iconGray.withValues(alpha: 0.1),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 20,
-                            vertical: 15,
-                          ),
-                          decoration: BoxDecoration(
-                            color: NovaColors.cardBackground,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            'Practice',
-                            style: TextStyle(
-                              color: const Color.fromARGB(255, 27, 87, 143),
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          'Movies',
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 96, 96, 96),
-                            fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                        Text(
-                          'Books',
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 96, 96, 96),
-                            fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                        Text(
-                          'Tests',
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 96, 96, 96),
-                            fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                      ],
-                    ),
+                  decoration: BoxDecoration(
+                    color: NovaColors.iconGray.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(12),
                   ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 12,
+                        ),
+                        decoration: BoxDecoration(
+                          color: NovaColors.cardBackground,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          'Practice',
+                          style: TextStyle(
+                            color: const Color.fromARGB(255, 27, 87, 143),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        'Movies',
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 96, 96, 96),
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                      Text(
+                        'Books',
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 96, 96, 96),
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                      Text(
+                        'Tests',
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 96, 96, 96),
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
 
-                  SizedBox(height: 20),
+                SizedBox(height: 20),
 
-                  PracticesUi(),
-                ],
-              ),
-            ],
-          ),
+                SizedBox(height: 420, child: PracticesUi()),
+              ],
+            ),
+          ],
         ),
       ),
 

@@ -11,7 +11,7 @@ class AppBarSection extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leadingWidth: 300,
       toolbarHeight: 80,
-      backgroundColor: NovaColors.backgroundLight,
+      backgroundColor: Colors.white,
       leading: Row(
         spacing: 8,
         mainAxisAlignment: MainAxisAlignment.start,
